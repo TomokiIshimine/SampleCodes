@@ -104,6 +104,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77D1C9B522759B3900AF6846 /* Build configuration list for PBXNativeTarget "SampleCodes" */;
 			buildPhases = (
+				77D1C9C12276A0C200AF6846 /* GetCommitHash */,
 				77D1C99F22759B3700AF6846 /* Sources */,
 				77D1C9A022759B3700AF6846 /* Frameworks */,
 				77D1C9A122759B3700AF6846 /* Resources */,
@@ -162,6 +163,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		77D1C9C12276A0C200AF6846 /* GetCommitHash */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = GetCommitHash;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncommithash=`eval git rev-parse --short HEAD`\n\n/usr/libexec/PlistBuddy -c \"Set :CommitHash $commithash\" \"${INFOPLIST_FILE}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		77D1C99F22759B3700AF6846 /* Sources */ = {
@@ -321,6 +343,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HK9N7T65V9;
 				INFOPLIST_FILE = SampleCodes/Info.plist;
+				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +362,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HK9N7T65V9;
 				INFOPLIST_FILE = SampleCodes/Info.plist;
+				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
