@@ -15,6 +15,8 @@
 		77D1C9BB2275E6D700AF6846 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1C9BA2275E6D700AF6846 /* Logger.swift */; };
 		77D1C9BE2276095200AF6846 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1C9BD2276095200AF6846 /* BaseViewController.swift */; };
 		77D1C9C02276096E00AF6846 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1C9BF2276096E00AF6846 /* BaseView.swift */; };
+		77D1C9C5227749C700AF6846 /* SampleCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1C9C4227749C700AF6846 /* SampleCodeCell.swift */; };
+		77D1C9C72279766600AF6846 /* SampleCodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1C9C62279766600AF6846 /* SampleCodeList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		77D1C9BA2275E6D700AF6846 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		77D1C9BD2276095200AF6846 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		77D1C9BF2276096E00AF6846 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		77D1C9C4227749C700AF6846 /* SampleCodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCodeCell.swift; sourceTree = "<group>"; };
+		77D1C9C62279766600AF6846 /* SampleCodeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCodeList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77BBC2CF22798D9100DF0022 /* SampleCodes */ = {
+			isa = PBXGroup;
+			children = (
+				77D1C9A822759B3700AF6846 /* SampleCodesViewController.swift */,
+				77D1C9C4227749C700AF6846 /* SampleCodeCell.swift */,
+				77D1C9C62279766600AF6846 /* SampleCodeList.swift */,
+			);
+			path = SampleCodes;
+			sourceTree = "<group>";
+		};
 		77D1C99A22759B3700AF6846 = {
 			isa = PBXGroup;
 			children = (
@@ -60,10 +74,10 @@
 		77D1C9A522759B3700AF6846 /* SampleCodes */ = {
 			isa = PBXGroup;
 			children = (
+				77BBC2CF22798D9100DF0022 /* SampleCodes */,
 				77D1C9BC2276090D00AF6846 /* Base */,
 				77D1C9B82275E66200AF6846 /* Samples */,
 				77D1C9A622759B3700AF6846 /* AppDelegate.swift */,
-				77D1C9A822759B3700AF6846 /* SampleCodesViewController.swift */,
 				77D1C9AA22759B3700AF6846 /* Main.storyboard */,
 				77D1C9AD22759B3900AF6846 /* Assets.xcassets */,
 				77D1C9AF22759B3900AF6846 /* LaunchScreen.storyboard */,
@@ -190,7 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77D1C9C5227749C700AF6846 /* SampleCodeCell.swift in Sources */,
 				77D1C9A922759B3700AF6846 /* SampleCodesViewController.swift in Sources */,
+				77D1C9C72279766600AF6846 /* SampleCodeList.swift in Sources */,
 				77D1C9BE2276095200AF6846 /* BaseViewController.swift in Sources */,
 				77D1C9C02276096E00AF6846 /* BaseView.swift in Sources */,
 				77D1C9BB2275E6D700AF6846 /* Logger.swift in Sources */,
