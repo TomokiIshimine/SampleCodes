@@ -45,14 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		77BBC2CF22798D9100DF0022 /* SampleCodes */ = {
+		77BBC2CF22798D9100DF0022 /* SampleCodesViewController */ = {
 			isa = PBXGroup;
 			children = (
 				77D1C9A822759B3700AF6846 /* SampleCodesViewController.swift */,
 				77D1C9C4227749C700AF6846 /* SampleCodeCell.swift */,
 				77D1C9C62279766600AF6846 /* SampleCodeList.swift */,
 			);
-			path = SampleCodes;
+			path = SampleCodesViewController;
 			sourceTree = "<group>";
 		};
 		77D1C99A22759B3700AF6846 = {
@@ -74,7 +74,7 @@
 		77D1C9A522759B3700AF6846 /* SampleCodes */ = {
 			isa = PBXGroup;
 			children = (
-				77BBC2CF22798D9100DF0022 /* SampleCodes */,
+				77BBC2CF22798D9100DF0022 /* SampleCodesViewController */,
 				77D1C9BC2276090D00AF6846 /* Base */,
 				77D1C9B82275E66200AF6846 /* Samples */,
 				77D1C9A622759B3700AF6846 /* AppDelegate.swift */,
