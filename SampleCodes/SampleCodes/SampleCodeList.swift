@@ -8,6 +8,36 @@
 
 import UIKit
 
-class SampleCodeList: NSObject {
+struct SampleCodeModel {
+	var name:String?
+	var viewController:()->UIViewController?
+}
 
+class SampleCodeList: NSObject {
+	static let shared = SampleCodeList()
+	
+	private override init(){}
+	
+	private var sampleCodeList:[SampleCodeModel] = [
+		SampleCodeModel(
+			name:"TestSampleCode",
+			viewController: {
+				var vc = UIViewController()
+				vc.title = "TestSampleCode"
+				vc.view.backgroundColor = UIColor.white
+				return vc
+		})
+	]
+	
+	var count:Int{
+		get{
+			return sampleCodeList.count
+		}
+	}
+	
+	subscript(idx:Int)->SampleCodeModel?{
+		get {
+			return sampleCodeList[idx]
+		}
+	}
 }

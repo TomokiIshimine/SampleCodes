@@ -35,15 +35,26 @@ class SampleCodesViewController: BaseViewController ,UICollectionViewDelegate, U
     }
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		Logger.debug("Set Cell num to 3")
-		return 30
+		Logger.debug("Set Cell num to \(SampleCodeList.shared.count)")
+		return SampleCodeList.shared.count
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = sampleCodesCollectionView.dequeueReusableCell(withReuseIdentifier: SampleCodeCell.SampleCodeCellIdentifer, for: indexPath)
+		let cell:SampleCodeCell = sampleCodesCollectionView.dequeueReusableCell(withReuseIdentifier: SampleCodeCell.SampleCodeCellIdentifer, for: indexPath) as! SampleCodeCell
+		cell.sampleCodeModel = SampleCodeList.shared[indexPath.item]
+		
 		Logger.debug("\(cell)")
 		
 		return cell
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		let sampleCode = SampleCodeList.shared[indexPath.item]
+		guard let vc = sampleCode?.viewController() else {
+			return
+		}
+		
+		self.navigationController?.pushViewController(vc, animated: true)
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

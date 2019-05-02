@@ -11,7 +11,6 @@ import UIKit
 class SampleCodeCell: UICollectionViewCell {
 	static let SampleCodeCellIdentifer = "SampleCodeCell"
 	private var sampleCodeNameLabel:UILabel  = UILabel()
-	private var sampleCodeId:Int = -1
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -33,8 +32,20 @@ class SampleCodeCell: UICollectionViewCell {
 	override func layoutSubviews() {
 		super.layoutSubviews()
 		
-		sampleCodeNameLabel.sizeToFit()
+		//sampleCodeNameLabel.sizeToFit()
+		sampleCodeNameLabel.frame.size = CGSize(width: self.frame.width - 10, height: self.frame.height/6)
 		sampleCodeNameLabel.frame.origin.x = (self.frame.width - sampleCodeNameLabel.frame.width)/2
-		sampleCodeNameLabel.frame.origin.y = self.frame.height * 4 / 5 - sampleCodeNameLabel.frame.height
+		sampleCodeNameLabel.frame.origin.y = self.frame.height - sampleCodeNameLabel.frame.height - 10
+		sampleCodeNameLabel.adjustsFontSizeToFitWidth = true
+		sampleCodeNameLabel.minimumScaleFactor = 0.3
+	}
+	
+	var sampleCodeModel:SampleCodeModel?{
+		didSet{
+			guard let sampleCodeModel = sampleCodeModel else {
+				return
+			}
+			sampleCodeNameLabel.text = sampleCodeModel.name
+		}
 	}
 }
