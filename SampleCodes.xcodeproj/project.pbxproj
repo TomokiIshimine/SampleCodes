@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77BBC2D2227B358300DF0022 /* TutorialSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BBC2D1227B358300DF0022 /* TutorialSampleViewController.swift */; };
+		77BBC2D4227C077200DF0022 /* TutorialSample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77BBC2D3227C077200DF0022 /* TutorialSample.storyboard */; };
+		77BBC2D6227F247400DF0022 /* HollowedOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BBC2D5227F247400DF0022 /* HollowedOutView.swift */; };
+		77BBC2D9227F49DE00DF0022 /* ImageTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BBC2D8227F49DE00DF0022 /* ImageTool.swift */; };
 		77D1C9A722759B3700AF6846 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1C9A622759B3700AF6846 /* AppDelegate.swift */; };
 		77D1C9A922759B3700AF6846 /* SampleCodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1C9A822759B3700AF6846 /* SampleCodesViewController.swift */; };
 		77D1C9AC22759B3700AF6846 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77D1C9AA22759B3700AF6846 /* Main.storyboard */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77BBC2D1227B358300DF0022 /* TutorialSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialSampleViewController.swift; sourceTree = "<group>"; };
+		77BBC2D3227C077200DF0022 /* TutorialSample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TutorialSample.storyboard; sourceTree = "<group>"; };
+		77BBC2D5227F247400DF0022 /* HollowedOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HollowedOutView.swift; sourceTree = "<group>"; };
+		77BBC2D8227F49DE00DF0022 /* ImageTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTool.swift; sourceTree = "<group>"; };
 		77D1C9A322759B3700AF6846 /* SampleCodes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleCodes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D1C9A622759B3700AF6846 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77D1C9A822759B3700AF6846 /* SampleCodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCodesViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +63,24 @@
 			path = SampleCodesViewController;
 			sourceTree = "<group>";
 		};
+		77BBC2D0227B2E0900DF0022 /* TutorialSample */ = {
+			isa = PBXGroup;
+			children = (
+				77BBC2D1227B358300DF0022 /* TutorialSampleViewController.swift */,
+				77BBC2D3227C077200DF0022 /* TutorialSample.storyboard */,
+				77BBC2D5227F247400DF0022 /* HollowedOutView.swift */,
+			);
+			path = TutorialSample;
+			sourceTree = "<group>";
+		};
+		77BBC2D7227F2A8200DF0022 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				77BBC2D8227F49DE00DF0022 /* ImageTool.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		77D1C99A22759B3700AF6846 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +100,7 @@
 		77D1C9A522759B3700AF6846 /* SampleCodes */ = {
 			isa = PBXGroup;
 			children = (
+				77BBC2D7227F2A8200DF0022 /* Tools */,
 				77BBC2CF22798D9100DF0022 /* SampleCodesViewController */,
 				77D1C9BC2276090D00AF6846 /* Base */,
 				77D1C9B82275E66200AF6846 /* Samples */,
@@ -89,6 +116,7 @@
 		77D1C9B82275E66200AF6846 /* Samples */ = {
 			isa = PBXGroup;
 			children = (
+				77BBC2D0227B2E0900DF0022 /* TutorialSample */,
 				77D1C9B92275E66F00AF6846 /* Logger */,
 			);
 			path = Samples;
@@ -172,6 +200,7 @@
 			files = (
 				77D1C9B122759B3900AF6846 /* LaunchScreen.storyboard in Resources */,
 				77D1C9AE22759B3900AF6846 /* Assets.xcassets in Resources */,
+				77BBC2D4227C077200DF0022 /* TutorialSample.storyboard in Resources */,
 				77D1C9AC22759B3700AF6846 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,11 +235,14 @@
 			files = (
 				77D1C9C5227749C700AF6846 /* SampleCodeCell.swift in Sources */,
 				77D1C9A922759B3700AF6846 /* SampleCodesViewController.swift in Sources */,
+				77BBC2D2227B358300DF0022 /* TutorialSampleViewController.swift in Sources */,
 				77D1C9C72279766600AF6846 /* SampleCodeList.swift in Sources */,
 				77D1C9BE2276095200AF6846 /* BaseViewController.swift in Sources */,
 				77D1C9C02276096E00AF6846 /* BaseView.swift in Sources */,
 				77D1C9BB2275E6D700AF6846 /* Logger.swift in Sources */,
 				77D1C9A722759B3700AF6846 /* AppDelegate.swift in Sources */,
+				77BBC2D6227F247400DF0022 /* HollowedOutView.swift in Sources */,
+				77BBC2D9227F49DE00DF0022 /* ImageTool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

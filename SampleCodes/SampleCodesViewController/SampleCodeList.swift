@@ -22,9 +22,17 @@ class SampleCodeList: NSObject {
 		SampleCodeModel(
 			name:"TestSampleCode",
 			viewController: {
-				var vc = UIViewController()
+				let vc = UIViewController()
 				vc.title = "TestSampleCode"
 				vc.view.backgroundColor = UIColor.white
+				return vc
+		}),
+		SampleCodeModel(
+			name:"TutorialSample",
+			viewController: {
+				let storybord = UIStoryboard(name: "TutorialSample", bundle: nil)
+				let vc = storybord.instantiateInitialViewController()
+				
 				return vc
 		})
 	]
