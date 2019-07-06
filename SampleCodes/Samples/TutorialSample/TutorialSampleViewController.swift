@@ -12,6 +12,10 @@ class TutorialSampleViewController: UIViewController {
 
 	@IBOutlet weak var nextButton: UIButton!
 	
+	@IBOutlet weak var tutorialStartButton: UIButton!
+	
+	private let hollowedOutView = HollowedOutView()
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
 		
@@ -24,12 +28,14 @@ class TutorialSampleViewController: UIViewController {
 	}
 	
 	override func viewDidLayoutSubviews() {
-		let hollowedOutView = HollowedOutView()
 		hollowedOutView.frame = self.view.frame
 		
-		hollowedOutView.hollowRect = nextButton.frame
+		hollowedOutView.hollowRect = tutorialStartButton.frame
 		
 		self.view.addSubview(hollowedOutView)
 	}
 
+	@IBAction func tapTutorialStartButton(_ sender: Any) {
+		hollowedOutView.hollowRect = nextButton.frame
+	}
 }

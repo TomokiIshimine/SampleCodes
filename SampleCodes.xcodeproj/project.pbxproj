@@ -21,6 +21,7 @@
 		77D1C9C02276096E00AF6846 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1C9BF2276096E00AF6846 /* BaseView.swift */; };
 		77D1C9C5227749C700AF6846 /* SampleCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1C9C4227749C700AF6846 /* SampleCodeCell.swift */; };
 		77D1C9C72279766600AF6846 /* SampleCodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D1C9C62279766600AF6846 /* SampleCodeList.swift */; };
+		77F9823922D08E1800B8013B /* UISamples.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F9823822D08E1800B8013B /* UISamples.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		77D1C9BF2276096E00AF6846 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		77D1C9C4227749C700AF6846 /* SampleCodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCodeCell.swift; sourceTree = "<group>"; };
 		77D1C9C62279766600AF6846 /* SampleCodeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCodeList.swift; sourceTree = "<group>"; };
+		77F9823822D08E1800B8013B /* UISamples.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UISamples.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		77D1C9B82275E66200AF6846 /* Samples */ = {
 			isa = PBXGroup;
 			children = (
+				77F9823722D08DE900B8013B /* UISamples */,
 				77BBC2D0227B2E0900DF0022 /* TutorialSample */,
 				77D1C9B92275E66F00AF6846 /* Logger */,
 			);
@@ -137,6 +140,14 @@
 				77D1C9BF2276096E00AF6846 /* BaseView.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		77F9823722D08DE900B8013B /* UISamples */ = {
+			isa = PBXGroup;
+			children = (
+				77F9823822D08E1800B8013B /* UISamples.storyboard */,
+			);
+			path = UISamples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +212,7 @@
 				77D1C9B122759B3900AF6846 /* LaunchScreen.storyboard in Resources */,
 				77D1C9AE22759B3900AF6846 /* Assets.xcassets in Resources */,
 				77BBC2D4227C077200DF0022 /* TutorialSample.storyboard in Resources */,
+				77F9823922D08E1800B8013B /* UISamples.storyboard in Resources */,
 				77D1C9AC22759B3700AF6846 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

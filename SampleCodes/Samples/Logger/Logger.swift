@@ -15,6 +15,17 @@ class Logger: NSObject {
 		let date = Date()
 		let formatter = DateFormatter()
 		
+		formatter.dateFormat = "HH:mm:ss.SSS"
+		formatter.locale = Locale(identifier: "en_US_POSIX")
+		formatter.calendar = Calendar(identifier: .gregorian)
+		
+		return formatter.string(from: date)
+	}
+	
+	private class var detaileDateString: String{
+		let date = Date()
+		let formatter = DateFormatter()
+		
 		formatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
 		formatter.locale = Locale(identifier: "en_US_POSIX")
 		formatter.calendar = Calendar(identifier: .gregorian)
@@ -118,14 +129,18 @@ class Logger: NSObject {
 	///   - message: メッセージ
 	private class func printToConsole(logLevel:LogLevel, file:String, function:String, line:Int, message:String){
 		#if DEBUG
-		print("\(dateString) [\(logLevel.rawValue.uppercased())] \(className(from: file)).\(function) #\(line): \(message)")
+		if logLevel == .ERROR {
+			print("\(detaileDateString) [\(logLevel.rawValue.uppercased())] [\(commitHash ?? "CommitHash is None")] \(className(from: file)).\(function) #\(line): \(message)")
+		}else{
+			print("\(dateString) [\(logLevel.rawValue.uppercased())] \(className(from: file)).\(function) #\(line): \(message)")
+		}
 		#endif
 	}
 	
 	/// コミット情報を出力する関数
 	class func commitInfo(){
 		#if DEBUG
-		print("\(dateString) [COMMIT] \(commitHash ?? "None")")
+		print("\(detaileDateString) [COMMIT] \(commitHash ?? "None")")
 		#endif
 	}
 }
