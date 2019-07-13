@@ -30,11 +30,19 @@ class SampleCodeList: NSObject {
 		SampleCodeModel(
 			name:"TutorialSample",
 			viewController: {
-				let storybord = UIStoryboard(name: "TutorialSample", bundle: nil)
-				let vc = storybord.instantiateInitialViewController()
+				let vc = UIStoryboard(name: "TutorialSample", bundle: nil).instantiateInitialViewController()
+				
+				return vc
+		}),
+		SampleCodeModel(
+			name: "UISamples",
+			viewController: {
+				let vc = UIStoryboard(name: "UISamples", bundle: nil).instantiateInitialViewController()
 				
 				return vc
 		})
+		
+		
 	]
 	
 	var count:Int{
