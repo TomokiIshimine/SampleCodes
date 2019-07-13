@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 		Logger.commitInfo()
 		Logger.debug("Start SampleCodes")
+		Logger.needInfoLog = false
         return true
     }
 

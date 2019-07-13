@@ -22,6 +22,7 @@ class Logger: NSObject {
 		return formatter.string(from: date)
 	}
 	
+	/// 詳細な現在時刻文字列
 	private class var detaileDateString: String{
 		let date = Date()
 		let formatter = DateFormatter()
@@ -57,9 +58,13 @@ class Logger: NSObject {
 		case ERROR
 		case TEMP
 	}
-	
-	static var shouldPrintOnlyTime:Bool = true
+
 	static var needsPrintCommitHashWhenError:Bool = true
+	
+	static var needInfoLog = true
+	static var needDebugLog = true
+	static var needErrorLog = true
+	static var needTempLog = true
 	
 	/// インフォログ
 	///
@@ -69,6 +74,10 @@ class Logger: NSObject {
 	///   - line: 行番号(指定しない)
 	///   - message: メッセージ
 	class func info(file: String = #file, function: String = #function, line: Int = #line, _ message: String = ""){
+		guard needInfoLog else{
+			return
+		}
+		
 		printToConsole(logLevel: .INFO, file: file, function: function, line: line, message: message)
 	}
 	
@@ -80,6 +89,10 @@ class Logger: NSObject {
 	///   - line: 行番号(指定しない)
 	///   - message: メッセージ
 	class func debug(file: String = #file, function: String = #function, line: Int = #line, _ message: String = ""){
+		guard needDebugLog else{
+			return
+		}
+		
 		printToConsole(logLevel: .DEBUG, file: file, function: function, line: line, message: message)
 	}
 	
@@ -91,6 +104,10 @@ class Logger: NSObject {
 	///   - line: 行番号(指定しない)
 	///   - message: メッセージ
 	class func error(file: String = #file, function: String = #function, line: Int = #line, _ message: String = ""){
+		guard needErrorLog else{
+			return
+		}
+		
 		if needsPrintCommitHashWhenError, let commitHash = commitHash {
 			#if DEBUG
 			print("Occur Error in Commit:\(commitHash)")
@@ -107,6 +124,10 @@ class Logger: NSObject {
 	///   - line: 行番号(指定しない)
 	///   - message: メッセージ
 	class func temp(file: String = #file, function: String = #function, line: Int = #line, _ message: String = ""){
+		guard needTempLog else{
+			return
+		}
+		
 		printToConsole(logLevel: .TEMP, file: file, function: function, line: line, message: message)
 	}
 	
